@@ -1,1 +1,2 @@
 # Change Screenshot folder
+defaults write com.apple.screencapture location ~/Documents/Screenshots

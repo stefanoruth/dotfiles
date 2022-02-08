@@ -9,6 +9,7 @@ alias trigger-ci="git commit --allow-empty -m ':robot: Trigger CI' && git push"
 alias k="kubectl"
 alias kg="kubectl get"
 alias kgp="kubectl get pods"
+alias kgc="kubectl get cronjob"
 alias kd="kubectl describe"
 alias kdp="kubectl describe pod"
 alias kdel="kubectl delete"
@@ -30,3 +31,11 @@ alias unison="unison -ui text"
 
 # Reload Terminal
 alias reload="exec zsh"
+
+function kcronEnable() {
+    kubectl patch cronjobs $1 -p '{"spec" : {"suspend" : false }}'
+}
+
+function kcronDisable() {
+    kubectl patch cronjobs $1 -p '{"spec" : {"suspend" : true }}'
+}

@@ -18,6 +18,7 @@ alias kdelstale="kubectl delete pods --field-selector='status.phase!=Pending,sta
 alias kga="kubectl get all"
 alias kpf="kubectl port-forward"
 alias kl="kubectl logs"
+alias kt="kubetail"
 alias pods="kubectl get pods"
 alias knamespace="kubectl config set-context --current --namespace"
 

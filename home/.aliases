@@ -21,6 +21,7 @@ alias kl="kubectl logs"
 alias kt="kubetail"
 alias pods="kubectl get pods"
 alias knamespace="kubectl config set-context --current --namespace"
+alias wall="watch kubectl get all"
 
 # Utility
 alias ip="curl icanhazip.com"
